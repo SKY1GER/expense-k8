@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: expense-namespace
+  labels:
+    tier: backend
+    component: backend
+    project: expense
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      tier: backend
+      component: backend
+      project: expense 
+  template:
+    metadata:
+      labels:
+        tier: backend
+        component: backend
+        project: expense 
+    spec:
+      containers:
+      - name: backend
+        image: joindevops/backend:v1.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: expense-namespace
+spec:
+  selector:
+    tier: backend
+    component: backend
+    project: expense 
+  ports:
+  - protocol: TCP
+    port: 8080 #serviceport differs from target port
+    targetPort: 8080

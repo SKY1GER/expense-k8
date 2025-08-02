@@ -33,8 +33,8 @@ spec:
       - name: backend
         image: joindevops/backend:v1.0
         envFrom:
-        - ConfigMapRef:
-            name: backend
+          - ConfigMapRef:
+              name: backend
 ---
 apiVersion: v1
 kind: Service

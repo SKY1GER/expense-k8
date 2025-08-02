@@ -35,7 +35,7 @@ spec:
     tier: mysql
     component: mysql
     project: expense 
-  port:
+  ports:
   - protocol: TCP
     port: 3306 #serviceport differs from target port
     targetport: 3306

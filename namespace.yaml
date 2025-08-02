@@ -4,4 +4,4 @@ metadata:
   name: expense-Namespace
   labels:
     name: expense
-    environment-dev 
+    environment: dev 

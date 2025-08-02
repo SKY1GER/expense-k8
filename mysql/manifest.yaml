@@ -38,4 +38,4 @@ spec:
   ports:
   - protocol: TCP
     port: 3306 #serviceport differs from target port
-    targetport: 3306
+    targetPort: 3306

@@ -6,4 +6,4 @@ metadata:
 spec:
   containers:
   - name: debug
-    image: sky1ger:debug:v1.0
+    image: sky1ger/debug:v1.0

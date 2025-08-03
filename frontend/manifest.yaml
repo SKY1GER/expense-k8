@@ -141,6 +141,7 @@ metadata:
   name: frontend
   namespace: expense-namespace
 spec:
+  type: LoadBalancer
   selector:
     tier: web
     component: frontend

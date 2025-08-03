@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: debug
+  namespace: expense-namespace
+spec:
+  containers:
+  - name: debug
+    image: sky1ger:debug:v1.0

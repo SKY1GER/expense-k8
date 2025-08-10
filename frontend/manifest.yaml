@@ -119,6 +119,13 @@ spec:
       containers:
       - name: frontend
         image: sky1ger/frontend:v1.0
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "150m"
+            memory: "256Mi"
         # envFrom:
         #   - configMapRef:
         #       name: frontend

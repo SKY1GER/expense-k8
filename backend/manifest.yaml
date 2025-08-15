@@ -36,6 +36,20 @@ spec:
       containers:
       - name: backend
         image: sky1ger/backend:v1.0
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          failureThreshold: 2
+          periodSeconds: 5
+          initialDelaySeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          failureThreshold: 2
+          periodSeconds: 5
+          initialDelaySeconds: 30
         resources:
           requests:
             cpu: "100m"

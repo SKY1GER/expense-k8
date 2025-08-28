@@ -155,7 +155,7 @@ spec:
     project: expense 
   ports:
   - protocol: TCP
-    port: 8080 #serviceport differs from target port
+    port: 80 #serviceport differs from target port
     targetPort: 8080
 
 ---
